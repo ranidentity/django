@@ -15,10 +15,17 @@ python manage.py startapp <app-name>
 
 
 to run
+
 python manage.py runserver
 
 
-to clone
+to clone, use venv in this case, installation of libraries inside venv
+1. db migration
+python manage.py makemigrations
+python manage.py migrate
+python manage.py createsuperuser
+2. create venv
 python -m venv env
-activate
-pip install -r requirements.txt
+activate venv
+pip install -r requirements.txt 
+python manage.py migrate users [migrate users first]
