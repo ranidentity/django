@@ -4,6 +4,6 @@ from .models import Member
 
 # Create your views here.
 def members(request):
-    mymember = Member.object.all().values()
+    mymember = Member.objects.all().values()
     template = loader.get_template('first.html')
     return HttpResponse(template.render())
